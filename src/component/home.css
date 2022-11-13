@@ -1,0 +1,258 @@
+/*******************************************
+				Defaults
+
+Remember to use something like type-scale.com 
+to get your font sizes
+*******************************************/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+html,
+body {
+    background: url("../images/green-small.jpg");
+}
+
+h1 {
+    padding: 0.5rem;
+    font-family: 'Tangerine', cursive;
+    font-size: 4rem;
+}
+
+h2 {
+    font-family: 'Tangerine', cursive;
+    font-size: 3rem;
+}
+
+.main h2 {
+    margin-bottom: 3rem;
+}
+
+p {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    font-family: 'Flamenco', cursive;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+svg {
+    fill: #8EA5FF;
+}
+
+
+/*******************************************
+				Layout
+*******************************************/
+
+.wrapper {
+    background-color: #78B23B;
+    opacity: 0.9;
+    margin: 0 auto;
+    border: 0.2rem solid #B26C58;
+}
+
+.masthead {
+    text-align: center;
+    background-color: #CC745A;
+}
+
+.main {
+    box-sizing: border-box;
+    background-color: #C6FF8A;
+    border: 0.2rem solid #B26C58;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.foot {
+    background-color: #CC745A;
+    clear: both;
+}
+
+.foot p {
+    text-align: center;
+}
+
+
+/*******************************************
+				Form Styles
+*******************************************/
+
+.formBox {
+    padding-bottom: 1rem;
+}
+
+.col {
+    padding-bottom: 1rem;
+}
+
+#slider-range {
+    margin: 1rem 0rem;
+    width: 80%;
+}
+
+.buttons {
+    padding-bottom: 1rem;
+}
+
+.buttons input {
+    margin-top: 3rem;
+    background-color: #ffffff;
+}
+
+label {
+    display: block;
+    font-family: 'Flamenco', cursive;
+    font-size: 1.3rem;
+}
+
+input,
+select,
+textarea {
+    padding: 0.4rem;
+    font-family: 'Flamenco', cursive;
+    width: 80%;
+    font-size: 1rem;
+}
+
+select {
+    width: 30%;
+}
+
+#btnRemove {
+    max-width: 200px;
+    margin: 7px;
+}
+
+.table-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    font-family: 'Flamenco', cursive;
+    font-size: 1.3rem;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgb(0 0 0 / 15%);
+}
+
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:nth-of-type(odd) {
+    background-color: #cbff95;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+
+/***************************************
+             Responsive layouts
+****************************************/
+
+@media screen and (min-width: 500px) {
+    .formBox {
+        width: 50%;
+        float: left;
+    }
+    .col {
+        width: 50%;
+        float: left;
+    }
+    .buttons input {
+        margin-top: 7rem;
+    }
+}
+
+@media screen and (min-width: 780px) {
+    .formBox {
+        width: 25%;
+        float: left;
+        margin: 1rem;
+    }
+    .col {
+        width: 25%;
+        float: left;
+    }
+    .buttons {
+        clear: both;
+    }
+    .buttons input {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .clearfix {
+        flex-direction: column;
+    }
+    .table-container {
+        flex-direction: column;
+    }
+    input,
+    select,
+    textarea {
+        width: 100%;
+    }
+    .styled-table {
+        min-width: 100%;
+        font-size: 0.6rem;
+        width: 100%;
+    }
+    #btnRemove {
+        max-width: 200px;
+        width: 200px;
+        margin: 0;
+    }
+}
